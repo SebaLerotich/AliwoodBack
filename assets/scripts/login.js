@@ -39,7 +39,8 @@ botonLoging.addEventListener("click", async (e) => {
         const email = mail.value;
         const password = pass.value;
 
-        await fetch(`http://127.0.0.1:3000/usuarios/${email}`)
+        //await fetch(`http://127.0.0.1:3000/usuarios/${email}`)
+        await fetch(`https://aliwoodback-production.up.railway.app/usuarios/${email}`)
             .then((response) => response.json())
             .then((data) => {
                 if(data.message){
